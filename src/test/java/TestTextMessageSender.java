@@ -19,7 +19,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 public class TestTextMessageSender {
     @ParameterizedTest
     @MethodSource("sourceByMessageSender")
-    public void sendAlwaysRuTextMessageSender(String ip, Location location, Country country, String text) {
+    public void checkMessageSender(String ip, Location location, Country country, String text) {
         GeoService geoService = Mockito.mock(GeoService.class);
         Mockito.when(geoService.byIp(ip)).thenReturn(location);
 
